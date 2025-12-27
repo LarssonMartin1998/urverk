@@ -1,9 +1,7 @@
 package main
 
-import (
-	"fmt"
-)
+import "urverk-backend/internal/httpserver"
 
 func main() {
-	fmt.Println("Hello, World!")
+	httpserver.ListenAndServeAndAwaitGracefulShutdown(httpserver.CreateRoutes())
 }
